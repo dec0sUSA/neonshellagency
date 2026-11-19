@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+  <title>Page not found | Neon Shell</title>
+  <meta name="description" content="That page isn't here. Request a quote from Neon Shell for LED billboard truck rental with a driver.">
+  <link rel="canonical" href="https://neonshellagency.com/404.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0c;
+      --bg-elev: #121216;
+      --lavender: #d8b4fe;
+      --cyan: #22d3ee;
+      --muted: #a78bfa;
+      --dim: #8a76b8;
+      --border: rgba(216, 180, 254, 0.18);
+    }
+    html { overflow-x: clip; }
+    body {
+      background: var(--bg);
+      color: var(--lavender);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+      min-height: 100dvh;
+      overflow-x: clip;
+      font-size: 16px;
+    }
+    .glow {
+      text-shadow:
+        0 0 6px rgba(216, 180, 254, 0.35),
+        0 0 16px rgba(216, 180, 254, 0.16);
+    }
+    .wrap {
+      width: min(100%, 72ch);
+      margin: 0 auto;
+      padding: 1.5rem clamp(1rem, 4vw, 1.25rem) 2.5rem;
+      text-align: center;
+    }
+    /* Option C header logo (Hands) */
+    .nsl-header { text-align:center; padding:1.5rem 0 1.75rem; }
+    .nsl-header a { display:inline-block; line-height:0; }
+    .nsl-header .nsl-logo { display:block; width:min(100%,360px); height:auto; margin:0 auto; }
+    @media (min-width: 768px) { .nsl-header .nsl-logo { width: min(100%, 640px); } }
+
+    h1 {
+      font-size: clamp(1.05rem, 4.8vw, 1.55rem);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--lavender);
+      margin: 0 0 0.75rem;
+      line-height: 1.35;
+    }
+    .lede {
+      color: var(--muted);
+      margin: 0 auto 1.75rem;
+      max-width: 60ch;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    .home-link {
+      display: inline-block;
+      margin: 0 0 1.5rem;
+      color: var(--cyan);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.9rem 1.35rem;
+      font: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--bg);
+      background: var(--lavender);
+      text-decoration: none;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      box-shadow:
+        0 0 12px rgba(216, 180, 254, 0.55),
+        0 0 32px rgba(216, 180, 254, 0.22);
+    }
+    .cta:hover, .cta:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 3px;
+    }
+    .cta-secondary {
+      color: var(--lavender);
+      background: transparent;
+      border: 2px solid var(--lavender);
+      box-shadow: none;
+    }
+    .cta-secondary:hover, .cta-secondary:focus-visible {
+      color: var(--bg);
+      background: var(--lavender);
+    }
+    .cta.beeper {
+      position: relative;
+      padding: 1.2rem 1.4rem;
+      font-weight: 700;
+      white-space: nowrap;
+      color: #1a0b2e;
+      background:
+        repeating-linear-gradient(0deg, rgba(26,11,46,.07) 0 1px, transparent 1px 3px),
+        linear-gradient(180deg, #e4cbff 0%, #c9a6ff 100%);
+      border: 3px solid #22d3ee;
+      border-radius: 10px;
+      outline: 6px solid #120a1f;
+      outline-offset: 0;
+      box-shadow:
+        inset 0 2px 6px rgba(26,11,46,.45),
+        inset 0 -1px 0 rgba(255,255,255,.35),
+        0 0 0 8px #1b1030,
+        0 0 18px rgba(34,211,238,.55),
+        0 0 36px rgba(185,140,255,.45);
+    }
+    .cta-row {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.85rem;
+      margin: 0.25rem 0 0.5rem;
+      padding: 0.85rem;
+    }
+    .cta-row .cta { width: 100%; max-width: 100%; }
+    @media (min-width: 560px) {
+      .cta-row { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; }
+      .cta-row .cta { width: auto; }
+    }
+    .email-vis {
+      margin: 0.35rem 0 0.7rem;
+      font-size: 16px;
+      color: var(--lavender);
+    }
+    .email-vis a {
+      color: var(--lavender);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .phone-note, .domain {
+      color: var(--dim);
+      margin-top: 0.5rem;
+    }
+    .domain {
+      color: #f3e8ff;
+      letter-spacing: 0.04em;
+    }
+
+    .cta-call-glow {
+      color: #061015;
+      background: linear-gradient(180deg, #a5f3fc 0%, #22d3ee 55%, #67e8f9 100%);
+      border: 2px solid #ecfeff;
+      font-weight: 700;
+      box-shadow:
+        0 0 10px rgba(34, 211, 238, 0.9),
+        0 0 24px rgba(34, 211, 238, 0.65),
+        0 0 48px rgba(167, 139, 250, 0.45),
+        0 0 4px rgba(255, 255, 255, 0.5);
+      text-shadow: none;
+    }
+    .sticky-cta { display: none; }
+    @media (max-width: 767px) {
+      .sticky-cta {
+        display: flex;
+        position: fixed;
+        left: 0; right: 0; bottom: 0;
+        z-index: 80;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+        background: rgba(10, 10, 12, 0.94);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-top: 1px solid var(--border);
+      }
+      .sticky-cta a {
+        flex: 1 1 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.65rem 0.75rem;
+        font: inherit;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        border-radius: 6px;
+      }
+      .sticky-cta-quote {
+        color: var(--lavender);
+        background: transparent;
+        border: 2px solid var(--lavender);
+      }
+      .sticky-cta-call {
+        color: #061015;
+        background: linear-gradient(180deg, #a5f3fc 0%, #22d3ee 60%, #67e8f9 100%);
+        border: 2px solid #ecfeff;
+        box-shadow: 0 0 10px rgba(34, 211, 238, 0.7), 0 0 22px rgba(34, 211, 238, 0.4);
+        flex: 1.35 1 0;
+        font-size: 0.7rem;
+        letter-spacing: 0.01em;
+        padding: 0.65rem 0.4rem;
+        white-space: nowrap;
+      }
+      body { padding-bottom: calc(4.75rem + 1.25rem + env(safe-area-inset-bottom, 0px)); }
+      .cta-row {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0.85rem;
+      }
+      .cta-row .cta {
+        width: auto;
+        flex: 1 1 0;
+        min-width: 0;
+        font-size: 0.82rem;
+        padding: 0.7rem 0.45rem;
+        white-space: nowrap;
+      }
+    }
+    @media (max-width: 430px) {
+      header .cta-row .cta {
+        font-size: 0.78rem;
+        padding: 0.7rem 12px;
+        white-space: nowrap;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="nsl-header">
+
+  <a href="/" aria-label="neon shell home">
+    <svg xmlns="http://www.w3.org/2000/svg" class="nsl-logo" viewBox="0 0 885.20 210.00" width="885.20" height="210.00" role="img" aria-label="neon shell" aria-labelledby="nsl-title"><title id="nsl-title">neon shell</title><style>
+.nsl-tr{stroke-dasharray:6 94;stroke-dashoffset:100;opacity:.55;animation:nsl-flow 9s linear infinite}
+.nsl-tr-door{stroke-dasharray:12 88;animation-duration:6s;opacity:.7}
+.nsl-breathe{animation:nsl-breathe 6s ease-in-out infinite}
+.nsl-door{animation:nsl-blink 2.8s ease-in-out infinite}
+@keyframes nsl-flow{to{stroke-dashoffset:0}}
+@keyframes nsl-breathe{0%,100%{opacity:.36}50%{opacity:.56}}
+@keyframes nsl-blink{0%,100%{opacity:1}50%{opacity:.25}}
+@media (prefers-reduced-motion: reduce){.nsl-tr{display:none}.nsl-breathe,.nsl-door{animation:none!important}.nsl-breathe{opacity:.46}.nsl-door{opacity:1}}
+</style><defs><linearGradient id="nsl-shellg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4dff"/><stop offset="1" stop-color="#b98cff"/></linearGradient><filter id="nsl-gBig" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="15"/></filter><filter id="nsl-gMid" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="4.5"/></filter><filter id="nsl-gTr" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><g id="nsl-gs"><path d="M115.04,69.20 C107.60,83.60 121.24,107.60 107.60,130.00 C96.44,147.60 69.16,147.60 61.72,130.00 C56.76,115.60 65.44,102.80 76.60,101.20 C89.00,98.00 96.44,83.60 115.04,69.20 Z" fill="none" stroke="#ff4dff" stroke-width="7.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M84.04,98.00 C96.44,102.80 111.32,99.60 112.56,90.00 M72.88,112.40 C89.00,122.00 111.32,118.80 115.04,107.60 " fill="none" stroke="#ff4dff" stroke-width="5.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M140.00,90.00 L162.80,114.00 L140.00,138.00" fill="none" stroke="#22d3ee" stroke-width="9.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M205.5 144.0V92.4H218.3V101.5H218.8Q220.5 97.3 224.05 94.25Q227.6 91.19999999999999 233.9 91.19999999999999Q241.5 91.19999999999999 246.25 96.25Q251.0 101.3 251.0 110.69999999999999V144.0H238.2V112.5Q238.2 101.3 228.5 101.3Q226.5 101.3 224.7 101.8Q222.9 102.3 221.45 103.35Q220.0 104.4 219.15 105.9Q218.3 107.4 218.3 109.5V144.0Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M288.2 145.2Q282.0 145.2 277.2 143.3Q272.4 141.4 269.15 137.9Q265.9 134.4 264.2 129.45Q262.5 124.5 262.5 118.3Q262.5 112.0 264.25 107.0Q266.0 102.0 269.2 98.5Q272.4 95.0 276.95 93.1Q281.5 91.19999999999999 287.2 91.19999999999999Q292.8 91.19999999999999 297.3 93.05Q301.8 94.9 304.95000000000005 98.3Q308.1 101.69999999999999 309.8 106.5Q311.5 111.3 311.5 117.1V121.3H275.3V122.6Q275.3 128.2 278.8 131.64999999999998Q282.3 135.1 288.6 135.1Q293.4 135.1 296.85 133.14999999999998Q300.3 131.2 302.6 128.0L309.9 135.3Q307.1 139.4 301.75 142.3Q296.4 145.2 288.2 145.2ZM287.3 100.6Q281.9 100.6 278.6 104.0Q275.3 107.4 275.3 113.0V113.7H298.7V112.8Q298.7 107.19999999999999 295.65 103.89999999999999Q292.6 100.6 287.3 100.6Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M346.0 145.2Q340.1 145.2 335.45000000000005 143.3Q330.8 141.4 327.55 137.9Q324.3 134.4 322.55 129.4Q320.8 124.4 320.8 118.2Q320.8 112.0 322.55 107.0Q324.3 102.0 327.55 98.5Q330.8 95.0 335.45000000000005 93.1Q340.1 91.19999999999999 346.0 91.19999999999999Q351.8 91.19999999999999 356.5 93.1Q361.2 95.0 364.45 98.5Q367.7 102.0 369.45 107.0Q371.2 112.0 371.2 118.2Q371.2 124.4 369.45 129.4Q367.7 134.4 364.45 137.9Q361.2 141.4 356.5 143.3Q351.8 145.2 346.0 145.2ZM346.0 135.4Q351.5 135.4 354.7 132.05Q357.9 128.7 357.9 122.2V114.2Q357.9 107.69999999999999 354.7 104.35Q351.5 101.0 346.0 101.0Q340.5 101.0 337.3 104.35Q334.1 107.69999999999999 334.1 114.2V122.2Q334.1 128.7 337.3 132.05Q340.5 135.4 346.0 135.4Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M382.5 144.0V92.4H395.3V101.5H395.8Q397.5 97.3 401.05 94.25Q404.6 91.19999999999999 410.9 91.19999999999999Q418.5 91.19999999999999 423.25 96.25Q428.0 101.3 428.0 110.69999999999999V144.0H415.2V112.5Q415.2 101.3 405.5 101.3Q403.5 101.3 401.7 101.8Q399.9 102.3 398.45 103.35Q397.0 104.4 396.15 105.9Q395.3 107.4 395.3 109.5V144.0Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M500.0 145.2Q491.5 145.2 485.29999999999995 142.55Q479.09999999999997 139.9 475.59999999999997 135.4L483.09999999999997 128.6Q486.3 132.1 490.45 134.0Q494.59999999999997 135.9 500.09999999999997 135.9Q504.9 135.9 507.79999999999995 134.3Q510.7 132.7 510.7 129.4Q510.7 126.6 508.75 125.6Q506.8 124.6 503.59999999999997 124.1L495.3 122.8Q492.09999999999997 122.3 489.04999999999995 121.35Q486.0 120.4 483.65 118.7Q481.3 117.0 479.9 114.35Q478.5 111.69999999999999 478.5 107.9Q478.5 99.8 484.54999999999995 95.5Q490.59999999999997 91.19999999999999 501.2 91.19999999999999Q508.7 91.19999999999999 513.95 93.3Q519.2 95.4 522.6 99.19999999999999L515.9 106.6Q513.7 104.19999999999999 510.05 102.35Q506.4 100.5 500.8 100.5Q491.0 100.5 491.0 106.6Q491.0 109.4 493.0 110.45Q495.0 111.5 498.2 112.0L506.4 113.3Q509.7 113.8 512.75 114.75Q515.8 115.7 518.15 117.4Q520.5 119.1 521.9 121.69999999999999Q523.3 124.3 523.3 128.1Q523.3 136.1 517.15 140.64999999999998Q511.0 145.2 500.0 145.2Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M536.7 70.0H549.5V101.5H550.0Q551.7 97.3 555.25 94.25Q558.8000000000001 91.19999999999999 565.1 91.19999999999999Q572.7 91.19999999999999 577.45 96.25Q582.2 101.3 582.2 110.69999999999999V144.0H569.4000000000001V112.5Q569.4000000000001 101.3 559.7 101.3Q557.7 101.3 555.9000000000001 101.8Q554.1 102.3 552.6500000000001 103.35Q551.2 104.4 550.35 105.9Q549.5 107.4 549.5 109.5V144.0H536.7Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M619.4000000000001 145.2Q613.2 145.2 608.4000000000001 143.3Q603.6 141.4 600.35 137.9Q597.1 134.4 595.4000000000001 129.45Q593.7 124.5 593.7 118.3Q593.7 112.0 595.45 107.0Q597.2 102.0 600.4000000000001 98.5Q603.6 95.0 608.1500000000001 93.1Q612.7 91.19999999999999 618.4000000000001 91.19999999999999Q624.0 91.19999999999999 628.5 93.05Q633.0 94.9 636.1500000000001 98.3Q639.3000000000001 101.69999999999999 641.0 106.5Q642.7 111.3 642.7 117.1V121.3H606.5V122.6Q606.5 128.2 610.0 131.64999999999998Q613.5 135.1 619.8000000000001 135.1Q624.6 135.1 628.05 133.14999999999998Q631.5 131.2 633.8000000000001 128.0L641.1 135.3Q638.3000000000001 139.4 632.95 142.3Q627.6 145.2 619.4000000000001 145.2ZM618.5 100.6Q613.1 100.6 609.8 104.0Q606.5 107.4 606.5 113.0V113.7H629.9000000000001V112.8Q629.9000000000001 107.19999999999999 626.8500000000001 103.89999999999999Q623.8000000000001 100.6 618.5 100.6Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M654.4000000000001 133.9H670.8000000000001V80.1H654.4000000000001V70.0H683.6V133.9H700.1V144.0H654.4000000000001Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M713.4000000000001 133.9H729.8000000000001V80.1H713.4000000000001V70.0H742.6V133.9H759.1V144.0H713.4000000000001Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g id="nsl-gd"><rect x="777.20" y="68.00" width="50.00" height="84.00" rx="5.00" fill="#22d3ee" stroke="#22d3ee" stroke-width="10"/></g></defs><g class="nsl-breathe" opacity=".46" filter="url(#nsl-gBig)"><use href="#nsl-gs"/></g><g opacity=".72" filter="url(#nsl-gMid)"><use href="#nsl-gs"/></g><path d="M115.04,69.20 C107.60,83.60 121.24,107.60 107.60,130.00 C96.44,147.60 69.16,147.60 61.72,130.00 C56.76,115.60 65.44,102.80 76.60,101.20 C89.00,98.00 96.44,83.60 115.04,69.20 Z" fill="none" stroke="url(#nsl-shellg)" stroke-width="7.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M84.04,98.00 C96.44,102.80 111.32,99.60 112.56,90.00 M72.88,112.40 C89.00,122.00 111.32,118.80 115.04,107.60 " fill="none" stroke="url(#nsl-shellg)" stroke-width="5.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M140.00,90.00 L162.80,114.00 L140.00,138.00" fill="none" stroke="#22d3ee" stroke-width="9.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M205.5 144.0V92.4H218.3V101.5H218.8Q220.5 97.3 224.05 94.25Q227.6 91.19999999999999 233.9 91.19999999999999Q241.5 91.19999999999999 246.25 96.25Q251.0 101.3 251.0 110.69999999999999V144.0H238.2V112.5Q238.2 101.3 228.5 101.3Q226.5 101.3 224.7 101.8Q222.9 102.3 221.45 103.35Q220.0 104.4 219.15 105.9Q218.3 107.4 218.3 109.5V144.0Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M288.2 145.2Q282.0 145.2 277.2 143.3Q272.4 141.4 269.15 137.9Q265.9 134.4 264.2 129.45Q262.5 124.5 262.5 118.3Q262.5 112.0 264.25 107.0Q266.0 102.0 269.2 98.5Q272.4 95.0 276.95 93.1Q281.5 91.19999999999999 287.2 91.19999999999999Q292.8 91.19999999999999 297.3 93.05Q301.8 94.9 304.95000000000005 98.3Q308.1 101.69999999999999 309.8 106.5Q311.5 111.3 311.5 117.1V121.3H275.3V122.6Q275.3 128.2 278.8 131.64999999999998Q282.3 135.1 288.6 135.1Q293.4 135.1 296.85 133.14999999999998Q300.3 131.2 302.6 128.0L309.9 135.3Q307.1 139.4 301.75 142.3Q296.4 145.2 288.2 145.2ZM287.3 100.6Q281.9 100.6 278.6 104.0Q275.3 107.4 275.3 113.0V113.7H298.7V112.8Q298.7 107.19999999999999 295.65 103.89999999999999Q292.6 100.6 287.3 100.6Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M346.0 145.2Q340.1 145.2 335.45000000000005 143.3Q330.8 141.4 327.55 137.9Q324.3 134.4 322.55 129.4Q320.8 124.4 320.8 118.2Q320.8 112.0 322.55 107.0Q324.3 102.0 327.55 98.5Q330.8 95.0 335.45000000000005 93.1Q340.1 91.19999999999999 346.0 91.19999999999999Q351.8 91.19999999999999 356.5 93.1Q361.2 95.0 364.45 98.5Q367.7 102.0 369.45 107.0Q371.2 112.0 371.2 118.2Q371.2 124.4 369.45 129.4Q367.7 134.4 364.45 137.9Q361.2 141.4 356.5 143.3Q351.8 145.2 346.0 145.2ZM346.0 135.4Q351.5 135.4 354.7 132.05Q357.9 128.7 357.9 122.2V114.2Q357.9 107.69999999999999 354.7 104.35Q351.5 101.0 346.0 101.0Q340.5 101.0 337.3 104.35Q334.1 107.69999999999999 334.1 114.2V122.2Q334.1 128.7 337.3 132.05Q340.5 135.4 346.0 135.4Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M382.5 144.0V92.4H395.3V101.5H395.8Q397.5 97.3 401.05 94.25Q404.6 91.19999999999999 410.9 91.19999999999999Q418.5 91.19999999999999 423.25 96.25Q428.0 101.3 428.0 110.69999999999999V144.0H415.2V112.5Q415.2 101.3 405.5 101.3Q403.5 101.3 401.7 101.8Q399.9 102.3 398.45 103.35Q397.0 104.4 396.15 105.9Q395.3 107.4 395.3 109.5V144.0Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M500.0 145.2Q491.5 145.2 485.29999999999995 142.55Q479.09999999999997 139.9 475.59999999999997 135.4L483.09999999999997 128.6Q486.3 132.1 490.45 134.0Q494.59999999999997 135.9 500.09999999999997 135.9Q504.9 135.9 507.79999999999995 134.3Q510.7 132.7 510.7 129.4Q510.7 126.6 508.75 125.6Q506.8 124.6 503.59999999999997 124.1L495.3 122.8Q492.09999999999997 122.3 489.04999999999995 121.35Q486.0 120.4 483.65 118.7Q481.3 117.0 479.9 114.35Q478.5 111.69999999999999 478.5 107.9Q478.5 99.8 484.54999999999995 95.5Q490.59999999999997 91.19999999999999 501.2 91.19999999999999Q508.7 91.19999999999999 513.95 93.3Q519.2 95.4 522.6 99.19999999999999L515.9 106.6Q513.7 104.19999999999999 510.05 102.35Q506.4 100.5 500.8 100.5Q491.0 100.5 491.0 106.6Q491.0 109.4 493.0 110.45Q495.0 111.5 498.2 112.0L506.4 113.3Q509.7 113.8 512.75 114.75Q515.8 115.7 518.15 117.4Q520.5 119.1 521.9 121.69999999999999Q523.3 124.3 523.3 128.1Q523.3 136.1 517.15 140.64999999999998Q511.0 145.2 500.0 145.2Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M536.7 70.0H549.5V101.5H550.0Q551.7 97.3 555.25 94.25Q558.8000000000001 91.19999999999999 565.1 91.19999999999999Q572.7 91.19999999999999 577.45 96.25Q582.2 101.3 582.2 110.69999999999999V144.0H569.4000000000001V112.5Q569.4000000000001 101.3 559.7 101.3Q557.7 101.3 555.9000000000001 101.8Q554.1 102.3 552.6500000000001 103.35Q551.2 104.4 550.35 105.9Q549.5 107.4 549.5 109.5V144.0H536.7Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M619.4000000000001 145.2Q613.2 145.2 608.4000000000001 143.3Q603.6 141.4 600.35 137.9Q597.1 134.4 595.4000000000001 129.45Q593.7 124.5 593.7 118.3Q593.7 112.0 595.45 107.0Q597.2 102.0 600.4000000000001 98.5Q603.6 95.0 608.1500000000001 93.1Q612.7 91.19999999999999 618.4000000000001 91.19999999999999Q624.0 91.19999999999999 628.5 93.05Q633.0 94.9 636.1500000000001 98.3Q639.3000000000001 101.69999999999999 641.0 106.5Q642.7 111.3 642.7 117.1V121.3H606.5V122.6Q606.5 128.2 610.0 131.64999999999998Q613.5 135.1 619.8000000000001 135.1Q624.6 135.1 628.05 133.14999999999998Q631.5 131.2 633.8000000000001 128.0L641.1 135.3Q638.3000000000001 139.4 632.95 142.3Q627.6 145.2 619.4000000000001 145.2ZM618.5 100.6Q613.1 100.6 609.8 104.0Q606.5 107.4 606.5 113.0V113.7H629.9000000000001V112.8Q629.9000000000001 107.19999999999999 626.8500000000001 103.89999999999999Q623.8000000000001 100.6 618.5 100.6Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M654.4000000000001 133.9H670.8000000000001V80.1H654.4000000000001V70.0H683.6V133.9H700.1V144.0H654.4000000000001Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M713.4000000000001 133.9H729.8000000000001V80.1H713.4000000000001V70.0H742.6V133.9H759.1V144.0H713.4000000000001Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><g class="nsl-trace" filter="url(#nsl-gTr)"><path class="nsl-tr" pathLength="100" d="M115.04,69.20 C107.60,83.60 121.24,107.60 107.60,130.00 C96.44,147.60 69.16,147.60 61.72,130.00 C56.76,115.60 65.44,102.80 76.60,101.20 C89.00,98.00 96.44,83.60 115.04,69.20 Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M205.5 144.0V92.4H218.3V101.5H218.8Q220.5 97.3 224.05 94.25Q227.6 91.19999999999999 233.9 91.19999999999999Q241.5 91.19999999999999 246.25 96.25Q251.0 101.3 251.0 110.69999999999999V144.0H238.2V112.5Q238.2 101.3 228.5 101.3Q226.5 101.3 224.7 101.8Q222.9 102.3 221.45 103.35Q220.0 104.4 219.15 105.9Q218.3 107.4 218.3 109.5V144.0Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M288.2 145.2Q282.0 145.2 277.2 143.3Q272.4 141.4 269.15 137.9Q265.9 134.4 264.2 129.45Q262.5 124.5 262.5 118.3Q262.5 112.0 264.25 107.0Q266.0 102.0 269.2 98.5Q272.4 95.0 276.95 93.1Q281.5 91.19999999999999 287.2 91.19999999999999Q292.8 91.19999999999999 297.3 93.05Q301.8 94.9 304.95000000000005 98.3Q308.1 101.69999999999999 309.8 106.5Q311.5 111.3 311.5 117.1V121.3H275.3V122.6Q275.3 128.2 278.8 131.64999999999998Q282.3 135.1 288.6 135.1Q293.4 135.1 296.85 133.14999999999998Q300.3 131.2 302.6 128.0L309.9 135.3Q307.1 139.4 301.75 142.3Q296.4 145.2 288.2 145.2ZM287.3 100.6Q281.9 100.6 278.6 104.0Q275.3 107.4 275.3 113.0V113.7H298.7V112.8Q298.7 107.19999999999999 295.65 103.89999999999999Q292.6 100.6 287.3 100.6Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M346.0 145.2Q340.1 145.2 335.45000000000005 143.3Q330.8 141.4 327.55 137.9Q324.3 134.4 322.55 129.4Q320.8 124.4 320.8 118.2Q320.8 112.0 322.55 107.0Q324.3 102.0 327.55 98.5Q330.8 95.0 335.45000000000005 93.1Q340.1 91.19999999999999 346.0 91.19999999999999Q351.8 91.19999999999999 356.5 93.1Q361.2 95.0 364.45 98.5Q367.7 102.0 369.45 107.0Q371.2 112.0 371.2 118.2Q371.2 124.4 369.45 129.4Q367.7 134.4 364.45 137.9Q361.2 141.4 356.5 143.3Q351.8 145.2 346.0 145.2ZM346.0 135.4Q351.5 135.4 354.7 132.05Q357.9 128.7 357.9 122.2V114.2Q357.9 107.69999999999999 354.7 104.35Q351.5 101.0 346.0 101.0Q340.5 101.0 337.3 104.35Q334.1 107.69999999999999 334.1 114.2V122.2Q334.1 128.7 337.3 132.05Q340.5 135.4 346.0 135.4Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M382.5 144.0V92.4H395.3V101.5H395.8Q397.5 97.3 401.05 94.25Q404.6 91.19999999999999 410.9 91.19999999999999Q418.5 91.19999999999999 423.25 96.25Q428.0 101.3 428.0 110.69999999999999V144.0H415.2V112.5Q415.2 101.3 405.5 101.3Q403.5 101.3 401.7 101.8Q399.9 102.3 398.45 103.35Q397.0 104.4 396.15 105.9Q395.3 107.4 395.3 109.5V144.0Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M500.0 145.2Q491.5 145.2 485.29999999999995 142.55Q479.09999999999997 139.9 475.59999999999997 135.4L483.09999999999997 128.6Q486.3 132.1 490.45 134.0Q494.59999999999997 135.9 500.09999999999997 135.9Q504.9 135.9 507.79999999999995 134.3Q510.7 132.7 510.7 129.4Q510.7 126.6 508.75 125.6Q506.8 124.6 503.59999999999997 124.1L495.3 122.8Q492.09999999999997 122.3 489.04999999999995 121.35Q486.0 120.4 483.65 118.7Q481.3 117.0 479.9 114.35Q478.5 111.69999999999999 478.5 107.9Q478.5 99.8 484.54999999999995 95.5Q490.59999999999997 91.19999999999999 501.2 91.19999999999999Q508.7 91.19999999999999 513.95 93.3Q519.2 95.4 522.6 99.19999999999999L515.9 106.6Q513.7 104.19999999999999 510.05 102.35Q506.4 100.5 500.8 100.5Q491.0 100.5 491.0 106.6Q491.0 109.4 493.0 110.45Q495.0 111.5 498.2 112.0L506.4 113.3Q509.7 113.8 512.75 114.75Q515.8 115.7 518.15 117.4Q520.5 119.1 521.9 121.69999999999999Q523.3 124.3 523.3 128.1Q523.3 136.1 517.15 140.64999999999998Q511.0 145.2 500.0 145.2Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M536.7 70.0H549.5V101.5H550.0Q551.7 97.3 555.25 94.25Q558.8000000000001 91.19999999999999 565.1 91.19999999999999Q572.7 91.19999999999999 577.45 96.25Q582.2 101.3 582.2 110.69999999999999V144.0H569.4000000000001V112.5Q569.4000000000001 101.3 559.7 101.3Q557.7 101.3 555.9000000000001 101.8Q554.1 102.3 552.6500000000001 103.35Q551.2 104.4 550.35 105.9Q549.5 107.4 549.5 109.5V144.0H536.7Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M619.4000000000001 145.2Q613.2 145.2 608.4000000000001 143.3Q603.6 141.4 600.35 137.9Q597.1 134.4 595.4000000000001 129.45Q593.7 124.5 593.7 118.3Q593.7 112.0 595.45 107.0Q597.2 102.0 600.4000000000001 98.5Q603.6 95.0 608.1500000000001 93.1Q612.7 91.19999999999999 618.4000000000001 91.19999999999999Q624.0 91.19999999999999 628.5 93.05Q633.0 94.9 636.1500000000001 98.3Q639.3000000000001 101.69999999999999 641.0 106.5Q642.7 111.3 642.7 117.1V121.3H606.5V122.6Q606.5 128.2 610.0 131.64999999999998Q613.5 135.1 619.8000000000001 135.1Q624.6 135.1 628.05 133.14999999999998Q631.5 131.2 633.8000000000001 128.0L641.1 135.3Q638.3000000000001 139.4 632.95 142.3Q627.6 145.2 619.4000000000001 145.2ZM618.5 100.6Q613.1 100.6 609.8 104.0Q606.5 107.4 606.5 113.0V113.7H629.9000000000001V112.8Q629.9000000000001 107.19999999999999 626.8500000000001 103.89999999999999Q623.8000000000001 100.6 618.5 100.6Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M654.4000000000001 133.9H670.8000000000001V80.1H654.4000000000001V70.0H683.6V133.9H700.1V144.0H654.4000000000001Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M713.4000000000001 133.9H729.8000000000001V80.1H713.4000000000001V70.0H742.6V133.9H759.1V144.0H713.4000000000001Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/></g><g class="nsl-door"><g opacity=".46" filter="url(#nsl-gBig)"><use href="#nsl-gd"/></g><g opacity=".72" filter="url(#nsl-gMid)"><use href="#nsl-gd"/></g><rect x="773.20" y="64.00" width="58.00" height="92.00" rx="9.00" fill="none" stroke="#22d3ee" stroke-opacity=".5" stroke-width="1.6"/><rect x="777.20" y="68.00" width="50.00" height="84.00" rx="5.00" fill="#22d3ee" stroke="#7af3ff" stroke-width="1.6"/><rect class="nsl-tr nsl-tr-door" pathLength="100" x="773.20" y="64.00" width="58.00" height="92.00" rx="9.00" fill="none" stroke="#7af3ff" stroke-width="2.4" filter="url(#nsl-gTr)"/></g></svg>
+  </a>
+      </div>
+      <h1 class="glow">That page isn't here.</h1>
+      <p class="lede">The link may be out of date. Head back to Neon Shell, or request a quote for LED billboard truck rental with a driver.</p>
+      <p><a class="home-link" href="/">Back to neonshellagency.com</a></p>
+      <div class="cta-row">
+        <a class="cta cta-call-glow" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+        <a class="cta" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Request a Quote</a>
+      </div>
+      <p class="email-vis"><a href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">sales@neonshell.si</a></p>
+    </header>
+    <p class="domain">neonshellagency.com</p>
+  </div>
+  <nav class="sticky-cta" aria-label="Quick contact">
+    <a class="sticky-cta-quote" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Quote</a>
+    <a class="sticky-cta-call" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+  </nav>
+</body>
+</html>

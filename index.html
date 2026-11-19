@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+  <title>LED Billboard Truck Rental with Driver | Neon Shell</title>
+  <meta name="description" content="LED billboard truck rental with a driver in the SF Bay Area, Los Angeles, San Diego, Austin, Dallas, Fort Worth and Seattle. Includes truck, driver, 8–12 hours of looped playback and GPS tracking.">
+  <link rel="canonical" href="https://neonshellagency.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Neon Shell">
+  <meta property="og:title" content="LED Billboard Truck Rental with Driver | Neon Shell">
+  <meta property="og:description" content="LED billboard truck rental with a driver in seven markets. Includes truck, driver, 8–12 hours of looped playback and GPS tracking.">
+  <meta property="og:image" content="https://neonshellagency.com/assets/og-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Neon Shell LED billboard trucks">
+  <meta property="og:url" content="https://neonshellagency.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LED Billboard Truck Rental with Driver | Neon Shell">
+  <meta name="twitter:description" content="LED billboard truck rental with a driver. Includes truck, driver, 8–12 hours of looped playback and GPS tracking.">
+  <meta name="twitter:image" content="https://neonshellagency.com/assets/og-card.jpg">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0c;
+      --bg-elev: #121216;
+      --lavender: #d8b4fe;
+      --cyan: #22d3ee;
+      --muted: #a78bfa;
+      --dim: #8a76b8;
+      --border: rgba(216, 180, 254, 0.18);
+      --space-1: 0.5rem;
+      --space-2: 1rem;
+      --space-3: 1.75rem;
+      --space-4: 2.5rem;
+      --space-5: 3.5rem;
+      --space-6: 4.75rem;
+      --measure: 72ch;
+      --sticky-bar-h: 4.75rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: clip;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--lavender);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+      min-height: 100dvh;
+      overflow-x: clip;
+      font-size: 16px;
+    }
+
+    .glow {
+      text-shadow:
+        0 0 6px rgba(216, 180, 254, 0.35),
+        0 0 16px rgba(216, 180, 254, 0.16);
+    }
+
+    .wrap {
+      width: min(100%, var(--measure));
+      margin: 0 auto;
+      padding: 1.5rem clamp(1rem, 4vw, 1.25rem) 2.5rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 1.5rem 0 2rem;
+    }
+
+    /* Option C header logo (Hands) */
+    .nsl-header { text-align:center; padding:1.5rem 0 1.75rem; }
+    .nsl-header a { display:inline-block; line-height:0; }
+    .nsl-header .nsl-logo { display:block; width:min(100%,360px); height:auto; margin:0 auto; }
+    @media (min-width: 768px) { .nsl-header .nsl-logo { width: min(100%, 640px); } }
+
+    h1 {
+      font-size: clamp(1.05rem, 4.8vw, 1.55rem);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--lavender);
+      margin-bottom: 1rem;
+      line-height: 1.35;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 0.5em;
+      height: 1em;
+      margin-left: 0.08em;
+      vertical-align: -0.08em;
+      background: var(--cyan);
+      box-shadow:
+        0 0 8px rgba(34, 211, 238, 0.85),
+        0 0 18px rgba(34, 211, 238, 0.45);
+      animation: cursorSoft 2.8s ease-in-out infinite;
+    }
+
+    @keyframes cursorSoft {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .sub {
+      font-size: clamp(1.1rem, 3.4vw, 1.35rem);
+      font-weight: 600;
+      color: var(--muted);
+      text-shadow:
+        0 0 10px rgba(167, 139, 250, 0.45),
+        0 0 22px rgba(216, 180, 254, 0.28);
+      margin-bottom: 1.5rem;
+      max-width: 36rem;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 0.04em;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.9rem 1.35rem;
+      font: inherit;
+      font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--bg);
+      background: var(--lavender);
+      text-decoration: none;
+      border-radius: 4px;
+      box-shadow:
+        0 0 12px rgba(216, 180, 254, 0.55),
+        0 0 32px rgba(216, 180, 254, 0.22);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      transform: translateY(-1px);
+      box-shadow:
+        0 0 16px rgba(216, 180, 254, 0.75),
+        0 0 40px rgba(216, 180, 254, 0.35),
+        0 0 8px rgba(34, 211, 238, 0.3);
+      outline: 2px solid var(--cyan);
+      outline-offset: 3px;
+    }
+
+    .cta:active { transform: translateY(0); }
+
+
+    .offer {
+      margin: var(--space-5) 0 0;
+      padding: 1.35rem 1.15rem;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .offer .included {
+      font-size: clamp(1.05rem, 3.5vw, 1.15rem);
+      font-weight: 600;
+      color: var(--lavender);
+      text-shadow: 0 0 8px rgba(216, 180, 254, 0.22);
+    }
+
+    .offer .detail {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--dim);
+      margin-top: 0.55rem;
+      max-width: 60ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .offer .subs {
+      margin-top: 0.75rem;
+      font-size: clamp(0.8rem, 2.5vw, 0.85rem);
+      color: var(--cyan);
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+    }
+
+    section {
+      margin-top: var(--space-5);
+      padding-top: var(--space-4);
+      background-image: linear-gradient(90deg, transparent, rgba(216, 180, 254, 0.22), transparent);
+      background-size: 100% 1px;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+
+    h2 {
+      font-size: clamp(0.72rem, 2.2vw, 0.78rem);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.35);
+      margin-bottom: 0.9rem;
+    }
+
+    .formats {
+      display: grid;
+      gap: var(--space-2);
+    }
+
+    .card {
+      padding: 0.95rem 1rem;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-align: left;
+    }
+
+    .card h3 {
+      font-size: clamp(0.9rem, 2.6vw, 0.95rem);
+      font-weight: 600;
+      color: var(--lavender);
+      margin-bottom: 0.3rem;
+      text-shadow: 0 0 8px rgba(216, 180, 254, 0.3);
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2);
+    }
+
+    .point {
+      padding: 0.9rem 0.85rem;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+      text-align: left;
+      min-height: 44px;
+    }
+
+    .point strong {
+      display: block;
+      color: var(--lavender);
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+      font-size: clamp(0.78rem, 2.4vw, 0.82rem);
+      text-shadow: 0 0 6px rgba(216, 180, 254, 0.25);
+    }
+
+    .steps {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: clamp(0.72rem, 2.2vw, 0.78rem);
+    }
+
+    .steps li {
+      padding: 0.55rem 0.75rem;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--bg-elev);
+      text-shadow:
+        0 0 6px rgba(216, 180, 254, 0.28),
+        0 0 14px rgba(34, 211, 238, 0.12);
+    }
+
+    .steps li::before {
+      content: attr(data-n);
+      color: var(--cyan);
+      margin-right: 0.35rem;
+      text-shadow: 0 0 6px rgba(34, 211, 238, 0.4);
+    }
+
+    .markets {
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .markets span {
+      color: var(--lavender);
+    }
+
+    footer {
+      margin-top: var(--space-6);
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: clamp(0.75rem, 2.2vw, 0.8rem);
+      color: var(--dim);
+    }
+
+    footer a {
+      color: var(--lavender);
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(216, 180, 254, 0.35);
+    }
+
+    footer a:hover,
+    footer a:focus-visible {
+      color: var(--cyan);
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+      outline: none;
+    }
+
+    footer > a[href^="tel:"] {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .domain {
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      opacity: 1;
+      color: #f3e8ff;
+      letter-spacing: 0.04em;
+      text-shadow:
+        0 0 6px rgba(216, 180, 254, 0.75),
+        0 0 14px rgba(34, 211, 238, 0.45);
+    }
+
+    @media (min-width: 520px) {
+      .formats { grid-template-columns: 1fr; }
+      .points { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    .x-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 14px auto 0;
+      color: #e9d5ff;
+      opacity: 0.85;
+      transition: 0.2s;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 11px;
+      box-sizing: border-box;
+    }
+
+    .x-link:hover {
+      opacity: 1;
+      color: #5ff;
+      filter: drop-shadow(0 0 8px #5ff);
+    }
+
+    footer .x-link {
+      display: inline-flex;
+      width: auto;
+    }
+
+    .hero-trucks {
+      width: 100%;
+      max-width: 100%;
+      margin: var(--space-4) 0 var(--space-5);
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .hero-trucks img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 6px;
+      box-shadow:
+        0 0 22px rgba(185, 140, 255, 0.16),
+        0 0 48px rgba(95, 255, 255, 0.08);
+    }
+
+    @media (min-width: 900px) {
+      .hero-trucks {
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+      }
+      .hero-trucks img {
+        width: 92%;
+        max-width: 1400px;
+      }
+    }
+    footer{display:flex;flex-direction:column;align-items:center;text-align:center}
+    footer .x-link{margin:0.5rem auto 0;display:inline-flex;justify-content:center}
+    footer .quote{margin:0 0 0.75rem;font-style:italic;font-size:clamp(1rem,3.5vw,1.25rem)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr)}
+    .steps li{justify-content:center}
+
+    /* pager / beeper LCD window */
+    .cta.beeper {
+      position: relative;
+      padding: 1.2rem 1.4rem;
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: clamp(1rem, 4.2vw, 1.4rem);
+      font-weight: 700;
+      white-space: nowrap;
+      letter-spacing: 0.02em;
+      color: #1a0b2e;
+      background:
+        repeating-linear-gradient(0deg, rgba(26,11,46,.07) 0 1px, transparent 1px 3px),
+        linear-gradient(180deg, #e4cbff 0%, #c9a6ff 100%);
+      border: 3px solid #22d3ee;
+      border-radius: 10px;
+      outline: 6px solid #120a1f;
+      outline-offset: 0;
+      box-shadow:
+        inset 0 2px 6px rgba(26,11,46,.45),
+        inset 0 -1px 0 rgba(255,255,255,.35),
+        0 0 0 8px #1b1030,
+        0 0 18px rgba(34,211,238,.55),
+        0 0 36px rgba(185,140,255,.45);
+      text-shadow: 0 0 1px rgba(26,11,46,.5);
+    }
+    .cta.beeper {
+      box-shadow:
+        inset 0 2px 6px rgba(26,11,46,.45),
+        inset 0 -1px 0 rgba(255,255,255,.35),
+        0 0 0 8px #1b1030,
+        0 0 16px rgba(34,211,238,.45),
+        0 0 32px rgba(185,140,255,.28);
+    }
+    .cta.beeper:hover { filter: brightness(1.06); }
+    footer .cta-row { margin: .6rem 0 .2rem; }
+
+    .social .x-link { margin: 14px 0 0; color: #e9d5ff; filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.45)); }
+
+    /* picture wrappers: keep existing img sizing rules */
+    .hero-trucks picture { display: block; width: 100%; }
+
+    .tagline {
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      text-shadow: 0 0 8px rgba(167, 139, 250, 0.35);
+      margin: 0 0 0.5rem;
+    }
+
+    .markets-sub {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-shadow:
+        0 0 10px rgba(167, 139, 250, 0.45),
+        0 0 22px rgba(216, 180, 254, 0.28);
+      margin: 0 auto 0.85rem;
+      max-width: 36rem;
+      letter-spacing: 0.03em;
+      line-height: 1.45;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0.85rem;
+      margin: 0.25rem 0 0.5rem;
+      padding: 0.85rem 0.85rem;
+    }
+
+    .cta-row .cta {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .cta-secondary {
+      color: var(--lavender);
+      background: transparent;
+      border: 2px solid var(--lavender);
+      box-shadow: none;
+    }
+
+    .cta-secondary:hover,
+    .cta-secondary:focus-visible {
+      color: var(--bg);
+      background: var(--lavender);
+      box-shadow:
+        0 0 16px rgba(216, 180, 254, 0.75),
+        0 0 40px rgba(216, 180, 254, 0.35),
+        0 0 8px rgba(34, 211, 238, 0.3);
+    }
+
+    .email-vis {
+      margin: 0.35rem 0 0;
+      font-size: 16px;
+      color: var(--lavender);
+      letter-spacing: 0.02em;
+    }
+
+    .email-vis a {
+      color: var(--lavender);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-shadow: 0 0 10px rgba(216, 180, 254, 0.35);
+    }
+
+    .email-vis a:hover,
+    .email-vis a:focus-visible {
+      color: var(--cyan);
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+      outline: none;
+    }
+
+    @media (min-width: 560px) {
+      .cta-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      .cta-row .cta {
+        width: auto;
+      }
+    }
+
+    /* Pass 2: compact mid-page CTA pair, footer call glow, sticky bar, reduced motion */
+
+    .cta-pair {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0.65rem;
+      margin: var(--space-4) 0;
+      padding: 0;
+    }
+    .cta-pair .cta {
+      width: 100%;
+      max-width: 100%;
+      min-height: 44px;
+    }
+    @media (min-width: 560px) {
+      .cta-pair {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      .cta-pair .cta { width: auto; }
+    }
+
+    /* Footer phone CTA: strong, steady neon glow (no flicker) */
+    .cta-call-glow {
+      color: #061015;
+      background:
+        linear-gradient(180deg, #a5f3fc 0%, #22d3ee 55%, #67e8f9 100%);
+      border: 2px solid #ecfeff;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      box-shadow:
+        0 0 10px rgba(34, 211, 238, 0.9),
+        0 0 24px rgba(34, 211, 238, 0.65),
+        0 0 48px rgba(167, 139, 250, 0.45),
+        0 0 4px rgba(255, 255, 255, 0.5);
+      text-shadow: none;
+    }
+    .cta-call-glow:hover,
+    .cta-call-glow:focus-visible {
+      filter: brightness(1.06);
+      box-shadow:
+        0 0 12px rgba(34, 211, 238, 0.95),
+        0 0 28px rgba(34, 211, 238, 0.7),
+        0 0 56px rgba(167, 139, 250, 0.5),
+        0 0 6px rgba(255, 255, 255, 0.6);
+    }
+
+    footer .cta-row {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1rem 0.5rem;
+    }
+    footer .cta-row .cta { width: auto; }
+
+    .sticky-cta {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      .sticky-cta {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 80;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom, 0px));
+        background: rgba(10, 10, 12, 0.94);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.45);
+      }
+      .sticky-cta a {
+        flex: 1 1 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.65rem 0.75rem;
+        font: inherit;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        border-radius: 6px;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .sticky-cta-quote {
+        color: var(--lavender);
+        background: transparent;
+        border: 2px solid var(--lavender);
+      }
+      .sticky-cta-call {
+        color: #061015;
+        background: linear-gradient(180deg, #a5f3fc 0%, #22d3ee 60%, #67e8f9 100%);
+        border: 2px solid #ecfeff;
+        box-shadow:
+          0 0 10px rgba(34, 211, 238, 0.7),
+          0 0 22px rgba(34, 211, 238, 0.4);
+        flex: 1.35 1 0;
+        font-size: 0.7rem;
+        letter-spacing: 0.01em;
+        padding: 0.65rem 0.4rem;
+        white-space: nowrap;
+      }
+      body {
+        padding-bottom: calc(var(--sticky-bar-h) + 1.25rem + env(safe-area-inset-bottom, 0px));
+      }
+      /* Keep first-screen header CTAs clear of the sticky bar */
+      header .cta-row {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0.85rem;
+        margin: 0.15rem 0 0.35rem;
+      }
+      header .cta-row .cta {
+        width: auto;
+        flex: 1 1 0;
+        min-width: 0;
+        font-size: 0.82rem;
+        padding: 0.7rem 0.45rem;
+        white-space: nowrap;
+      }
+      header .cta.beeper {
+        font-size: 0.82rem;
+        padding: 0.7rem 0.45rem;
+        outline-width: 4px;
+        box-shadow:
+          inset 0 2px 6px rgba(26,11,46,.45),
+          inset 0 -1px 0 rgba(255,255,255,.35),
+          0 0 0 5px #1b1030,
+          0 0 14px rgba(34,211,238,.4),
+          0 0 26px rgba(185,140,255,.22);
+      }
+    }
+
+    @media (max-width: 430px) {
+      header .cta-row .cta,
+      header .cta.beeper {
+        font-size: 0.78rem;
+        padding: 0.7rem 12px;
+        white-space: nowrap;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="nsl-header">
+
+  <a href="/" aria-label="neon shell home">
+    <svg xmlns="http://www.w3.org/2000/svg" class="nsl-logo" viewBox="0 0 885.20 210.00" width="885.20" height="210.00" role="img" aria-label="neon shell" aria-labelledby="nsl-title"><title id="nsl-title">neon shell</title><style>
+.nsl-tr{stroke-dasharray:6 94;stroke-dashoffset:100;opacity:.55;animation:nsl-flow 9s linear infinite}
+.nsl-tr-door{stroke-dasharray:12 88;animation-duration:6s;opacity:.7}
+.nsl-breathe{animation:nsl-breathe 6s ease-in-out infinite}
+.nsl-door{animation:nsl-blink 2.8s ease-in-out infinite}
+@keyframes nsl-flow{to{stroke-dashoffset:0}}
+@keyframes nsl-breathe{0%,100%{opacity:.36}50%{opacity:.56}}
+@keyframes nsl-blink{0%,100%{opacity:1}50%{opacity:.25}}
+@media (prefers-reduced-motion: reduce){.nsl-tr{display:none}.nsl-breathe,.nsl-door{animation:none!important}.nsl-breathe{opacity:.46}.nsl-door{opacity:1}}
+</style><defs><linearGradient id="nsl-shellg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff4dff"/><stop offset="1" stop-color="#b98cff"/></linearGradient><filter id="nsl-gBig" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="15"/></filter><filter id="nsl-gMid" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="4.5"/></filter><filter id="nsl-gTr" x="-20%" y="-60%" width="140%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><g id="nsl-gs"><path d="M115.04,69.20 C107.60,83.60 121.24,107.60 107.60,130.00 C96.44,147.60 69.16,147.60 61.72,130.00 C56.76,115.60 65.44,102.80 76.60,101.20 C89.00,98.00 96.44,83.60 115.04,69.20 Z" fill="none" stroke="#ff4dff" stroke-width="7.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M84.04,98.00 C96.44,102.80 111.32,99.60 112.56,90.00 M72.88,112.40 C89.00,122.00 111.32,118.80 115.04,107.60 " fill="none" stroke="#ff4dff" stroke-width="5.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M140.00,90.00 L162.80,114.00 L140.00,138.00" fill="none" stroke="#22d3ee" stroke-width="9.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M205.5 144.0V92.4H218.3V101.5H218.8Q220.5 97.3 224.05 94.25Q227.6 91.19999999999999 233.9 91.19999999999999Q241.5 91.19999999999999 246.25 96.25Q251.0 101.3 251.0 110.69999999999999V144.0H238.2V112.5Q238.2 101.3 228.5 101.3Q226.5 101.3 224.7 101.8Q222.9 102.3 221.45 103.35Q220.0 104.4 219.15 105.9Q218.3 107.4 218.3 109.5V144.0Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M288.2 145.2Q282.0 145.2 277.2 143.3Q272.4 141.4 269.15 137.9Q265.9 134.4 264.2 129.45Q262.5 124.5 262.5 118.3Q262.5 112.0 264.25 107.0Q266.0 102.0 269.2 98.5Q272.4 95.0 276.95 93.1Q281.5 91.19999999999999 287.2 91.19999999999999Q292.8 91.19999999999999 297.3 93.05Q301.8 94.9 304.95000000000005 98.3Q308.1 101.69999999999999 309.8 106.5Q311.5 111.3 311.5 117.1V121.3H275.3V122.6Q275.3 128.2 278.8 131.64999999999998Q282.3 135.1 288.6 135.1Q293.4 135.1 296.85 133.14999999999998Q300.3 131.2 302.6 128.0L309.9 135.3Q307.1 139.4 301.75 142.3Q296.4 145.2 288.2 145.2ZM287.3 100.6Q281.9 100.6 278.6 104.0Q275.3 107.4 275.3 113.0V113.7H298.7V112.8Q298.7 107.19999999999999 295.65 103.89999999999999Q292.6 100.6 287.3 100.6Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M346.0 145.2Q340.1 145.2 335.45000000000005 143.3Q330.8 141.4 327.55 137.9Q324.3 134.4 322.55 129.4Q320.8 124.4 320.8 118.2Q320.8 112.0 322.55 107.0Q324.3 102.0 327.55 98.5Q330.8 95.0 335.45000000000005 93.1Q340.1 91.19999999999999 346.0 91.19999999999999Q351.8 91.19999999999999 356.5 93.1Q361.2 95.0 364.45 98.5Q367.7 102.0 369.45 107.0Q371.2 112.0 371.2 118.2Q371.2 124.4 369.45 129.4Q367.7 134.4 364.45 137.9Q361.2 141.4 356.5 143.3Q351.8 145.2 346.0 145.2ZM346.0 135.4Q351.5 135.4 354.7 132.05Q357.9 128.7 357.9 122.2V114.2Q357.9 107.69999999999999 354.7 104.35Q351.5 101.0 346.0 101.0Q340.5 101.0 337.3 104.35Q334.1 107.69999999999999 334.1 114.2V122.2Q334.1 128.7 337.3 132.05Q340.5 135.4 346.0 135.4Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M382.5 144.0V92.4H395.3V101.5H395.8Q397.5 97.3 401.05 94.25Q404.6 91.19999999999999 410.9 91.19999999999999Q418.5 91.19999999999999 423.25 96.25Q428.0 101.3 428.0 110.69999999999999V144.0H415.2V112.5Q415.2 101.3 405.5 101.3Q403.5 101.3 401.7 101.8Q399.9 102.3 398.45 103.35Q397.0 104.4 396.15 105.9Q395.3 107.4 395.3 109.5V144.0Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M500.0 145.2Q491.5 145.2 485.29999999999995 142.55Q479.09999999999997 139.9 475.59999999999997 135.4L483.09999999999997 128.6Q486.3 132.1 490.45 134.0Q494.59999999999997 135.9 500.09999999999997 135.9Q504.9 135.9 507.79999999999995 134.3Q510.7 132.7 510.7 129.4Q510.7 126.6 508.75 125.6Q506.8 124.6 503.59999999999997 124.1L495.3 122.8Q492.09999999999997 122.3 489.04999999999995 121.35Q486.0 120.4 483.65 118.7Q481.3 117.0 479.9 114.35Q478.5 111.69999999999999 478.5 107.9Q478.5 99.8 484.54999999999995 95.5Q490.59999999999997 91.19999999999999 501.2 91.19999999999999Q508.7 91.19999999999999 513.95 93.3Q519.2 95.4 522.6 99.19999999999999L515.9 106.6Q513.7 104.19999999999999 510.05 102.35Q506.4 100.5 500.8 100.5Q491.0 100.5 491.0 106.6Q491.0 109.4 493.0 110.45Q495.0 111.5 498.2 112.0L506.4 113.3Q509.7 113.8 512.75 114.75Q515.8 115.7 518.15 117.4Q520.5 119.1 521.9 121.69999999999999Q523.3 124.3 523.3 128.1Q523.3 136.1 517.15 140.64999999999998Q511.0 145.2 500.0 145.2Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M536.7 70.0H549.5V101.5H550.0Q551.7 97.3 555.25 94.25Q558.8000000000001 91.19999999999999 565.1 91.19999999999999Q572.7 91.19999999999999 577.45 96.25Q582.2 101.3 582.2 110.69999999999999V144.0H569.4000000000001V112.5Q569.4000000000001 101.3 559.7 101.3Q557.7 101.3 555.9000000000001 101.8Q554.1 102.3 552.6500000000001 103.35Q551.2 104.4 550.35 105.9Q549.5 107.4 549.5 109.5V144.0H536.7Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M619.4000000000001 145.2Q613.2 145.2 608.4000000000001 143.3Q603.6 141.4 600.35 137.9Q597.1 134.4 595.4000000000001 129.45Q593.7 124.5 593.7 118.3Q593.7 112.0 595.45 107.0Q597.2 102.0 600.4000000000001 98.5Q603.6 95.0 608.1500000000001 93.1Q612.7 91.19999999999999 618.4000000000001 91.19999999999999Q624.0 91.19999999999999 628.5 93.05Q633.0 94.9 636.1500000000001 98.3Q639.3000000000001 101.69999999999999 641.0 106.5Q642.7 111.3 642.7 117.1V121.3H606.5V122.6Q606.5 128.2 610.0 131.64999999999998Q613.5 135.1 619.8000000000001 135.1Q624.6 135.1 628.05 133.14999999999998Q631.5 131.2 633.8000000000001 128.0L641.1 135.3Q638.3000000000001 139.4 632.95 142.3Q627.6 145.2 619.4000000000001 145.2ZM618.5 100.6Q613.1 100.6 609.8 104.0Q606.5 107.4 606.5 113.0V113.7H629.9000000000001V112.8Q629.9000000000001 107.19999999999999 626.8500000000001 103.89999999999999Q623.8000000000001 100.6 618.5 100.6Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M654.4000000000001 133.9H670.8000000000001V80.1H654.4000000000001V70.0H683.6V133.9H700.1V144.0H654.4000000000001Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M713.4000000000001 133.9H729.8000000000001V80.1H713.4000000000001V70.0H742.6V133.9H759.1V144.0H713.4000000000001Z" fill="#a855f7" stroke="#a855f7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g id="nsl-gd"><rect x="777.20" y="68.00" width="50.00" height="84.00" rx="5.00" fill="#22d3ee" stroke="#22d3ee" stroke-width="10"/></g></defs><g class="nsl-breathe" opacity=".46" filter="url(#nsl-gBig)"><use href="#nsl-gs"/></g><g opacity=".72" filter="url(#nsl-gMid)"><use href="#nsl-gs"/></g><path d="M115.04,69.20 C107.60,83.60 121.24,107.60 107.60,130.00 C96.44,147.60 69.16,147.60 61.72,130.00 C56.76,115.60 65.44,102.80 76.60,101.20 C89.00,98.00 96.44,83.60 115.04,69.20 Z" fill="none" stroke="url(#nsl-shellg)" stroke-width="7.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M84.04,98.00 C96.44,102.80 111.32,99.60 112.56,90.00 M72.88,112.40 C89.00,122.00 111.32,118.80 115.04,107.60 " fill="none" stroke="url(#nsl-shellg)" stroke-width="5.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M140.00,90.00 L162.80,114.00 L140.00,138.00" fill="none" stroke="#22d3ee" stroke-width="9.0" stroke-linecap="round" stroke-linejoin="round"/><path d="M205.5 144.0V92.4H218.3V101.5H218.8Q220.5 97.3 224.05 94.25Q227.6 91.19999999999999 233.9 91.19999999999999Q241.5 91.19999999999999 246.25 96.25Q251.0 101.3 251.0 110.69999999999999V144.0H238.2V112.5Q238.2 101.3 228.5 101.3Q226.5 101.3 224.7 101.8Q222.9 102.3 221.45 103.35Q220.0 104.4 219.15 105.9Q218.3 107.4 218.3 109.5V144.0Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M288.2 145.2Q282.0 145.2 277.2 143.3Q272.4 141.4 269.15 137.9Q265.9 134.4 264.2 129.45Q262.5 124.5 262.5 118.3Q262.5 112.0 264.25 107.0Q266.0 102.0 269.2 98.5Q272.4 95.0 276.95 93.1Q281.5 91.19999999999999 287.2 91.19999999999999Q292.8 91.19999999999999 297.3 93.05Q301.8 94.9 304.95000000000005 98.3Q308.1 101.69999999999999 309.8 106.5Q311.5 111.3 311.5 117.1V121.3H275.3V122.6Q275.3 128.2 278.8 131.64999999999998Q282.3 135.1 288.6 135.1Q293.4 135.1 296.85 133.14999999999998Q300.3 131.2 302.6 128.0L309.9 135.3Q307.1 139.4 301.75 142.3Q296.4 145.2 288.2 145.2ZM287.3 100.6Q281.9 100.6 278.6 104.0Q275.3 107.4 275.3 113.0V113.7H298.7V112.8Q298.7 107.19999999999999 295.65 103.89999999999999Q292.6 100.6 287.3 100.6Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M346.0 145.2Q340.1 145.2 335.45000000000005 143.3Q330.8 141.4 327.55 137.9Q324.3 134.4 322.55 129.4Q320.8 124.4 320.8 118.2Q320.8 112.0 322.55 107.0Q324.3 102.0 327.55 98.5Q330.8 95.0 335.45000000000005 93.1Q340.1 91.19999999999999 346.0 91.19999999999999Q351.8 91.19999999999999 356.5 93.1Q361.2 95.0 364.45 98.5Q367.7 102.0 369.45 107.0Q371.2 112.0 371.2 118.2Q371.2 124.4 369.45 129.4Q367.7 134.4 364.45 137.9Q361.2 141.4 356.5 143.3Q351.8 145.2 346.0 145.2ZM346.0 135.4Q351.5 135.4 354.7 132.05Q357.9 128.7 357.9 122.2V114.2Q357.9 107.69999999999999 354.7 104.35Q351.5 101.0 346.0 101.0Q340.5 101.0 337.3 104.35Q334.1 107.69999999999999 334.1 114.2V122.2Q334.1 128.7 337.3 132.05Q340.5 135.4 346.0 135.4Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M382.5 144.0V92.4H395.3V101.5H395.8Q397.5 97.3 401.05 94.25Q404.6 91.19999999999999 410.9 91.19999999999999Q418.5 91.19999999999999 423.25 96.25Q428.0 101.3 428.0 110.69999999999999V144.0H415.2V112.5Q415.2 101.3 405.5 101.3Q403.5 101.3 401.7 101.8Q399.9 102.3 398.45 103.35Q397.0 104.4 396.15 105.9Q395.3 107.4 395.3 109.5V144.0Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M500.0 145.2Q491.5 145.2 485.29999999999995 142.55Q479.09999999999997 139.9 475.59999999999997 135.4L483.09999999999997 128.6Q486.3 132.1 490.45 134.0Q494.59999999999997 135.9 500.09999999999997 135.9Q504.9 135.9 507.79999999999995 134.3Q510.7 132.7 510.7 129.4Q510.7 126.6 508.75 125.6Q506.8 124.6 503.59999999999997 124.1L495.3 122.8Q492.09999999999997 122.3 489.04999999999995 121.35Q486.0 120.4 483.65 118.7Q481.3 117.0 479.9 114.35Q478.5 111.69999999999999 478.5 107.9Q478.5 99.8 484.54999999999995 95.5Q490.59999999999997 91.19999999999999 501.2 91.19999999999999Q508.7 91.19999999999999 513.95 93.3Q519.2 95.4 522.6 99.19999999999999L515.9 106.6Q513.7 104.19999999999999 510.05 102.35Q506.4 100.5 500.8 100.5Q491.0 100.5 491.0 106.6Q491.0 109.4 493.0 110.45Q495.0 111.5 498.2 112.0L506.4 113.3Q509.7 113.8 512.75 114.75Q515.8 115.7 518.15 117.4Q520.5 119.1 521.9 121.69999999999999Q523.3 124.3 523.3 128.1Q523.3 136.1 517.15 140.64999999999998Q511.0 145.2 500.0 145.2Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M536.7 70.0H549.5V101.5H550.0Q551.7 97.3 555.25 94.25Q558.8000000000001 91.19999999999999 565.1 91.19999999999999Q572.7 91.19999999999999 577.45 96.25Q582.2 101.3 582.2 110.69999999999999V144.0H569.4000000000001V112.5Q569.4000000000001 101.3 559.7 101.3Q557.7 101.3 555.9000000000001 101.8Q554.1 102.3 552.6500000000001 103.35Q551.2 104.4 550.35 105.9Q549.5 107.4 549.5 109.5V144.0H536.7Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M619.4000000000001 145.2Q613.2 145.2 608.4000000000001 143.3Q603.6 141.4 600.35 137.9Q597.1 134.4 595.4000000000001 129.45Q593.7 124.5 593.7 118.3Q593.7 112.0 595.45 107.0Q597.2 102.0 600.4000000000001 98.5Q603.6 95.0 608.1500000000001 93.1Q612.7 91.19999999999999 618.4000000000001 91.19999999999999Q624.0 91.19999999999999 628.5 93.05Q633.0 94.9 636.1500000000001 98.3Q639.3000000000001 101.69999999999999 641.0 106.5Q642.7 111.3 642.7 117.1V121.3H606.5V122.6Q606.5 128.2 610.0 131.64999999999998Q613.5 135.1 619.8000000000001 135.1Q624.6 135.1 628.05 133.14999999999998Q631.5 131.2 633.8000000000001 128.0L641.1 135.3Q638.3000000000001 139.4 632.95 142.3Q627.6 145.2 619.4000000000001 145.2ZM618.5 100.6Q613.1 100.6 609.8 104.0Q606.5 107.4 606.5 113.0V113.7H629.9000000000001V112.8Q629.9000000000001 107.19999999999999 626.8500000000001 103.89999999999999Q623.8000000000001 100.6 618.5 100.6Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M654.4000000000001 133.9H670.8000000000001V80.1H654.4000000000001V70.0H683.6V133.9H700.1V144.0H654.4000000000001Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M713.4000000000001 133.9H729.8000000000001V80.1H713.4000000000001V70.0H742.6V133.9H759.1V144.0H713.4000000000001Z" fill="#d8b4fe" stroke="#f3e8ff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><g class="nsl-trace" filter="url(#nsl-gTr)"><path class="nsl-tr" pathLength="100" d="M115.04,69.20 C107.60,83.60 121.24,107.60 107.60,130.00 C96.44,147.60 69.16,147.60 61.72,130.00 C56.76,115.60 65.44,102.80 76.60,101.20 C89.00,98.00 96.44,83.60 115.04,69.20 Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M205.5 144.0V92.4H218.3V101.5H218.8Q220.5 97.3 224.05 94.25Q227.6 91.19999999999999 233.9 91.19999999999999Q241.5 91.19999999999999 246.25 96.25Q251.0 101.3 251.0 110.69999999999999V144.0H238.2V112.5Q238.2 101.3 228.5 101.3Q226.5 101.3 224.7 101.8Q222.9 102.3 221.45 103.35Q220.0 104.4 219.15 105.9Q218.3 107.4 218.3 109.5V144.0Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M288.2 145.2Q282.0 145.2 277.2 143.3Q272.4 141.4 269.15 137.9Q265.9 134.4 264.2 129.45Q262.5 124.5 262.5 118.3Q262.5 112.0 264.25 107.0Q266.0 102.0 269.2 98.5Q272.4 95.0 276.95 93.1Q281.5 91.19999999999999 287.2 91.19999999999999Q292.8 91.19999999999999 297.3 93.05Q301.8 94.9 304.95000000000005 98.3Q308.1 101.69999999999999 309.8 106.5Q311.5 111.3 311.5 117.1V121.3H275.3V122.6Q275.3 128.2 278.8 131.64999999999998Q282.3 135.1 288.6 135.1Q293.4 135.1 296.85 133.14999999999998Q300.3 131.2 302.6 128.0L309.9 135.3Q307.1 139.4 301.75 142.3Q296.4 145.2 288.2 145.2ZM287.3 100.6Q281.9 100.6 278.6 104.0Q275.3 107.4 275.3 113.0V113.7H298.7V112.8Q298.7 107.19999999999999 295.65 103.89999999999999Q292.6 100.6 287.3 100.6Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M346.0 145.2Q340.1 145.2 335.45000000000005 143.3Q330.8 141.4 327.55 137.9Q324.3 134.4 322.55 129.4Q320.8 124.4 320.8 118.2Q320.8 112.0 322.55 107.0Q324.3 102.0 327.55 98.5Q330.8 95.0 335.45000000000005 93.1Q340.1 91.19999999999999 346.0 91.19999999999999Q351.8 91.19999999999999 356.5 93.1Q361.2 95.0 364.45 98.5Q367.7 102.0 369.45 107.0Q371.2 112.0 371.2 118.2Q371.2 124.4 369.45 129.4Q367.7 134.4 364.45 137.9Q361.2 141.4 356.5 143.3Q351.8 145.2 346.0 145.2ZM346.0 135.4Q351.5 135.4 354.7 132.05Q357.9 128.7 357.9 122.2V114.2Q357.9 107.69999999999999 354.7 104.35Q351.5 101.0 346.0 101.0Q340.5 101.0 337.3 104.35Q334.1 107.69999999999999 334.1 114.2V122.2Q334.1 128.7 337.3 132.05Q340.5 135.4 346.0 135.4Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M382.5 144.0V92.4H395.3V101.5H395.8Q397.5 97.3 401.05 94.25Q404.6 91.19999999999999 410.9 91.19999999999999Q418.5 91.19999999999999 423.25 96.25Q428.0 101.3 428.0 110.69999999999999V144.0H415.2V112.5Q415.2 101.3 405.5 101.3Q403.5 101.3 401.7 101.8Q399.9 102.3 398.45 103.35Q397.0 104.4 396.15 105.9Q395.3 107.4 395.3 109.5V144.0Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M500.0 145.2Q491.5 145.2 485.29999999999995 142.55Q479.09999999999997 139.9 475.59999999999997 135.4L483.09999999999997 128.6Q486.3 132.1 490.45 134.0Q494.59999999999997 135.9 500.09999999999997 135.9Q504.9 135.9 507.79999999999995 134.3Q510.7 132.7 510.7 129.4Q510.7 126.6 508.75 125.6Q506.8 124.6 503.59999999999997 124.1L495.3 122.8Q492.09999999999997 122.3 489.04999999999995 121.35Q486.0 120.4 483.65 118.7Q481.3 117.0 479.9 114.35Q478.5 111.69999999999999 478.5 107.9Q478.5 99.8 484.54999999999995 95.5Q490.59999999999997 91.19999999999999 501.2 91.19999999999999Q508.7 91.19999999999999 513.95 93.3Q519.2 95.4 522.6 99.19999999999999L515.9 106.6Q513.7 104.19999999999999 510.05 102.35Q506.4 100.5 500.8 100.5Q491.0 100.5 491.0 106.6Q491.0 109.4 493.0 110.45Q495.0 111.5 498.2 112.0L506.4 113.3Q509.7 113.8 512.75 114.75Q515.8 115.7 518.15 117.4Q520.5 119.1 521.9 121.69999999999999Q523.3 124.3 523.3 128.1Q523.3 136.1 517.15 140.64999999999998Q511.0 145.2 500.0 145.2Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M536.7 70.0H549.5V101.5H550.0Q551.7 97.3 555.25 94.25Q558.8000000000001 91.19999999999999 565.1 91.19999999999999Q572.7 91.19999999999999 577.45 96.25Q582.2 101.3 582.2 110.69999999999999V144.0H569.4000000000001V112.5Q569.4000000000001 101.3 559.7 101.3Q557.7 101.3 555.9000000000001 101.8Q554.1 102.3 552.6500000000001 103.35Q551.2 104.4 550.35 105.9Q549.5 107.4 549.5 109.5V144.0H536.7Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M619.4000000000001 145.2Q613.2 145.2 608.4000000000001 143.3Q603.6 141.4 600.35 137.9Q597.1 134.4 595.4000000000001 129.45Q593.7 124.5 593.7 118.3Q593.7 112.0 595.45 107.0Q597.2 102.0 600.4000000000001 98.5Q603.6 95.0 608.1500000000001 93.1Q612.7 91.19999999999999 618.4000000000001 91.19999999999999Q624.0 91.19999999999999 628.5 93.05Q633.0 94.9 636.1500000000001 98.3Q639.3000000000001 101.69999999999999 641.0 106.5Q642.7 111.3 642.7 117.1V121.3H606.5V122.6Q606.5 128.2 610.0 131.64999999999998Q613.5 135.1 619.8000000000001 135.1Q624.6 135.1 628.05 133.14999999999998Q631.5 131.2 633.8000000000001 128.0L641.1 135.3Q638.3000000000001 139.4 632.95 142.3Q627.6 145.2 619.4000000000001 145.2ZM618.5 100.6Q613.1 100.6 609.8 104.0Q606.5 107.4 606.5 113.0V113.7H629.9000000000001V112.8Q629.9000000000001 107.19999999999999 626.8500000000001 103.89999999999999Q623.8000000000001 100.6 618.5 100.6Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M654.4000000000001 133.9H670.8000000000001V80.1H654.4000000000001V70.0H683.6V133.9H700.1V144.0H654.4000000000001Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/><path class="nsl-tr" pathLength="100" d="M713.4000000000001 133.9H729.8000000000001V80.1H713.4000000000001V70.0H742.6V133.9H759.1V144.0H713.4000000000001Z" fill="none" stroke="#f3e8ff" stroke-width="1.8" stroke-linecap="round"/></g><g class="nsl-door"><g opacity=".46" filter="url(#nsl-gBig)"><use href="#nsl-gd"/></g><g opacity=".72" filter="url(#nsl-gMid)"><use href="#nsl-gd"/></g><rect x="773.20" y="64.00" width="58.00" height="92.00" rx="9.00" fill="none" stroke="#22d3ee" stroke-opacity=".5" stroke-width="1.6"/><rect x="777.20" y="68.00" width="50.00" height="84.00" rx="5.00" fill="#22d3ee" stroke="#7af3ff" stroke-width="1.6"/><rect class="nsl-tr nsl-tr-door" pathLength="100" x="773.20" y="64.00" width="58.00" height="92.00" rx="9.00" fill="none" stroke="#7af3ff" stroke-width="2.4" filter="url(#nsl-gTr)"/></g></svg>
+  </a>
+      </div>
+      <p class="tagline">Sell the moment. We bring the truck.</p>
+      <h1 class="glow">LED Billboard Truck Rental, Driver Included<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="markets-sub">SF Bay Area · Los Angeles · San Diego · Austin · Dallas · Fort Worth · Seattle</p>
+      <div class="cta-row">
+        <a class="cta beeper" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Request a Quote</a>
+        <a class="cta cta-secondary" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+      </div>
+      <p class="email-vis"><a href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">sales@neonshell.si</a></p>
+      <p class="sub">Neon Shell Agency (NSA)</p>
+    </header>
+
+    <figure class="hero-trucks">
+      <picture>
+      <source type="image/webp" srcset="assets/trucks-800.webp 800w, assets/trucks.webp 1280w" sizes="(max-width: 800px) 100vw, min(1400px, 92vw)">
+      <img
+        src="assets/trucks.jpg"
+        srcset="assets/trucks-800.jpg 800w, assets/trucks.jpg 1280w"
+        sizes="(max-width: 800px) 100vw, min(1400px, 92vw)"
+        alt="Four Neon Shell LED trucks climbing the California Incline in Santa Monica at sunset"
+        width="1280"
+        height="720"
+        fetchpriority="high"
+      >
+    </picture>
+    </figure>
+
+    <div class="offer">
+      <p class="included">What's included</p>
+      <p class="detail">Parked or mobile: truck, driver, 8–12 hours of looped playback, GPS tracking</p>
+    </div>
+
+    <div class="cta-pair">
+      <a class="cta" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Request a Quote</a>
+      <a class="cta cta-secondary" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+    </div>
+
+    <figure class="hero-trucks" style="max-width:520px;margin-left:auto;margin-right:auto;">
+      <picture>
+      <source type="image/webp" srcset="assets/gta6-truck-800.webp 800w, assets/gta6-truck.webp 864w" sizes="(max-width: 520px) 100vw, 520px">
+      <img
+        src="assets/gta6-truck.jpg"
+        srcset="assets/gta6-truck-800.jpg 800w, assets/gta6-truck.jpg 864w"
+        sizes="(max-width: 520px) 100vw, 520px"
+        alt="Neon Shell LED truck showing a GTA VI style ad with neon glow and smoke"
+        width="864"
+        height="1152"
+        loading="lazy"
+      >
+    </picture>
+    </figure>
+
+    <section>
+      <h2>Formats</h2>
+      <div class="formats">
+        <article class="card">
+          <h3>Anchor</h3>
+          <p>Parked at the venue gate, storefront, launch line or fan zone.</p>
+        </article>
+        <article class="card">
+          <h3>Cruise</h3>
+          <p>Mobile loops by neighborhood, freeway and daypart.</p>
+        </article>
+        <article class="card">
+          <h3>Convoy</h3>
+          <p>Two or more trucks in formation for a full takeover.</p>
+        </article>
+        <article class="card">
+          <h3>CyberDeck</h3>
+          <p>A large video screen folding out for endless views among crowds.</p>
+        </article>
+      </div>
+    </section>
+    <figure class="hero-trucks" style="max-width:640px;margin-left:auto;margin-right:auto;">
+      <picture>
+      <source type="image/webp" srcset="assets/cyberdeck-truck-800.webp 800w, assets/cyberdeck-truck.webp 1024w" sizes="(max-width: 640px) 100vw, 640px">
+      <img
+        src="assets/cyberdeck-truck.jpg"
+        srcset="assets/cyberdeck-truck-800.jpg 800w, assets/cyberdeck-truck.jpg 1024w"
+        sizes="(max-width: 640px) 100vw, 640px"
+        alt="Rent CyberDeck for your event: Neon Shell giant LED screen truck at a night festival"
+        width="1024"
+        height="1024"
+        loading="lazy"
+      >
+    </picture>
+    </figure>
+    <figure class="hero-trucks">
+      <picture>
+      <source type="image/webp" srcset="assets/whitehouse-truck-800.webp 800w, assets/whitehouse-truck.webp 1152w" sizes="(max-width: 800px) 100vw, min(1400px, 92vw)">
+      <img
+        src="assets/whitehouse-truck.jpg"
+        srcset="assets/whitehouse-truck-800.jpg 800w, assets/whitehouse-truck.jpg 1152w"
+        sizes="(max-width: 800px) 100vw, min(1400px, 92vw)"
+        alt="Neon Shell LED truck parked outside the White House"
+        width="1152"
+        height="864"
+        loading="lazy"
+      >
+    </picture>
+    </figure>
+
+    <div class="cta-pair">
+      <a class="cta" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Request a Quote</a>
+      <a class="cta cta-secondary" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+    </div>
+    <section>
+      <h2>Why Neon Shell</h2>
+      <div class="points">
+        <div class="point"><strong>Book before lunch</strong> Same-day booking when inventory is open.</div>
+        <div class="point"><strong>Everything included</strong> Truck, driver, 8–12 hours of looped playback and GPS.</div>
+        <div class="point"><strong>DIY or done-for-you</strong> Bring creative or let us handle it.</div>
+        <div class="point"><strong>Aim the Glow</strong> Park where the crowd actually is.</div>
+        <div class="point"><strong>Swap the message live</strong> Change creative mid-run when needed.</div>
+        <div class="point"><strong>Every mile on the record</strong> GPS tracking on every run.</div>
+      </div>
+    </section>
+    <figure class="hero-trucks">
+      <picture>
+      <source type="image/webp" srcset="assets/justtryit-trucks-800.webp 800w, assets/justtryit-trucks.webp 1280w" sizes="(max-width: 800px) 100vw, min(1400px, 92vw)">
+      <img
+        src="assets/justtryit-trucks.jpg"
+        srcset="assets/justtryit-trucks-800.jpg 800w, assets/justtryit-trucks.jpg 1280w"
+        sizes="(max-width: 800px) 100vw, min(1400px, 92vw)"
+        alt="Neon Shell LED trucks at night: Steve Hilton for Governor, then Just Try It"
+        width="1280"
+        height="720"
+        loading="lazy"
+      >
+    </picture>
+    </figure>
+
+    <div class="cta-pair">
+      <a class="cta" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Request a Quote</a>
+      <a class="cta cta-secondary" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+    </div>
+    <section>
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li data-n="1.">Quote</li>
+        <li data-n="2.">Hold</li>
+        <li data-n="3.">Confirm</li>
+        <li data-n="4.">Approve</li>
+        <li data-n="5.">Ride</li>
+        <li data-n="6.">Report</li>
+      </ol>
+    </section>
+
+    <div class="cta-pair">
+      <a class="cta" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Request a Quote</a>
+      <a class="cta cta-secondary" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+    </div>
+    <section>
+      <h2>Current Markets</h2>
+      <p class="markets"><span>SF / Bay Area</span> · <span>Los Angeles</span> · <span>San Diego</span> · <span>Austin</span> · <span>Dallas</span> · <span>Fort Worth</span> · <span>Seattle</span></p>
+    </section>
+
+    <div class="cta-pair">
+      <a class="cta" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Request a Quote</a>
+      <a class="cta cta-secondary" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+    </div>
+
+    <figure class="hero-trucks">
+      <picture>
+      <source type="image/webp" srcset="assets/lombard-trucks-800.webp 800w, assets/lombard-trucks.webp 1184w" sizes="(max-width: 800px) 100vw, min(1400px, 92vw)">
+      <img
+        src="assets/lombard-trucks.jpg"
+        srcset="assets/lombard-trucks-800.jpg 800w, assets/lombard-trucks.jpg 1184w"
+        sizes="(max-width: 800px) 100vw, min(1400px, 92vw)"
+        alt="Six matte black Neon Shell LED trucks with glowing Grok Bot logos winding down Lombard Street in San Francisco"
+        width="1184"
+        height="880"
+        loading="lazy"
+      >
+    </picture>
+    </figure>
+
+    <figure class="hero-trucks">
+      <picture>
+      <source type="image/webp" srcset="assets/goldengate-800.webp 800w, assets/goldengate.webp 1280w" sizes="(max-width: 800px) 100vw, min(1400px, 92vw)">
+      <img
+        src="assets/goldengate.jpg"
+        srcset="assets/goldengate-800.jpg 800w, assets/goldengate.jpg 1280w"
+        sizes="(max-width: 800px) 100vw, min(1400px, 92vw)"
+        alt="Neon Shell LED trucks crossing the Golden Gate Bridge at night with the San Francisco skyline"
+        width="1280"
+        height="720"
+        loading="lazy"
+      >
+    </picture>
+    </figure>
+
+    <footer>
+      <p class="quote glow">The medium is the message</p>
+      <div class="cta-row">
+        <a class="cta cta-call-glow" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+        <a class="cta" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Request a Quote</a>
+      </div>
+      <p class="email-vis"><a href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">sales@neonshell.si</a></p>
+      <p class="sub">Neon Shell Agency (NSA)</p>
+      <div class="social" style="display:flex;justify-content:center;gap:0.75rem"><a class="x-link" href="https://x.com/NeonShellAgency" target="_blank" rel="noopener noreferrer" aria-label="Neon Shell on X"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="x-link" href="https://www.instagram.com/neonshellagency" target="_blank" rel="noopener noreferrer" aria-label="Neon Shell on Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a></div>
+      <p class="domain">neonshellagency.com</p>
+    </footer>
+  </div>
+  <nav class="sticky-cta" aria-label="Quick contact">
+    <a class="sticky-cta-quote" href="mailto:sales@neonshell.si?subject=LED%20truck%20quote%20request&body=Name%3A%0ACompany%3A%0APhone%3A%0ACity%2Fmarket%3A%0ADate%28s%29%3A%0AHours%20needed%3A%0ACampaign%20details%3A">Quote</a>
+    <a class="sticky-cta-call" href="tel:+14244242034" aria-label="Call (424) 424-2034">(424) 424-2034</a>
+  </nav>
+</body>
+</html>
