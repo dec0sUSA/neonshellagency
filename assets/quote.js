@@ -17,6 +17,7 @@
     if (!a || !campaign) return;
     var intent = a.getAttribute('data-quote-intent') || '';
     campaign.value = intent;
+    if (!intent) campaign.defaultValue = '';
     if (notes) {
       notes.placeholder = intent
         ? intent + ' — parked or mobile, hours needed, campaign details'
@@ -42,7 +43,7 @@
     e.preventDefault();
     contactCheck();
     if (!form.reportValidity()) return;
-    if (form.elements['_honey'].value) { show('ok', 'Thanks! Your quote request is in.'); form.reset(); return; }
+    if (form.elements['_honey'].value) { show('ok', 'Thanks! Your quote request is in.'); form.reset(); if (src) src.value = location.hostname; if (campaign) { campaign.value = ''; campaign.defaultValue = ''; } if (notes) notes.placeholder = notesDefaultPlaceholder; return; }
     var data = {};
     Array.prototype.forEach.call(form.elements, function (el) {
       if (el.name && el.type !== 'submit') data[el.name] = el.value;
@@ -61,6 +62,8 @@
       if (res.ok && (res.j.success === true || res.j.success === 'true')) {
         form.reset();
         if (src) src.value = location.hostname;
+        if (campaign) { campaign.value = ''; campaign.defaultValue = ''; }
+        if (notes) notes.placeholder = notesDefaultPlaceholder;
         show('ok', 'Thanks! Your quote request is in. We will reply soon. Need it faster? Call (424) 424-2034.');
       } else {
         throw new Error('send failed');
