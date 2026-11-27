@@ -8,6 +8,22 @@
   var src = form.elements['source'];
   if (src) src.value = location.hostname;
 
+  var campaign = form.elements['campaign'];
+  var notes = form.elements['notes'];
+  var notesDefaultPlaceholder = notes ? (notes.getAttribute('placeholder') || '') : '';
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    var a = t && t.closest ? t.closest('a[href="#quote"]') : null;
+    if (!a || !campaign) return;
+    var intent = a.getAttribute('data-quote-intent') || '';
+    campaign.value = intent;
+    if (notes) {
+      notes.placeholder = intent
+        ? intent + ' — parked or mobile, hours needed, campaign details'
+        : notesDefaultPlaceholder;
+    }
+  });
+
   function contactCheck() {
     var ok = (email.value.trim() !== '' || phone.value.trim() !== '');
     email.setCustomValidity(ok ? '' : 'Add an email or a phone number so we can reach you.');
