@@ -739,7 +739,7 @@
     @media (max-width: 767px) {
       html { scroll-padding-bottom: calc(var(--sticky-bar-h) + 1rem + env(safe-area-inset-bottom, 0px)); }
       .hero-trucks, .sample-cap { scroll-margin-bottom: calc(var(--sticky-bar-h) + 1rem + env(safe-area-inset-bottom, 0px)); }
-      .sample-cap { padding-bottom: 0.25rem; }
+      .sample-cap { padding-bottom: calc(var(--sticky-bar-h) + env(safe-area-inset-bottom, 0px)); }
     }
   </style>
   <link rel="icon" href="/favicon.ico" sizes="any">
